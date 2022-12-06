@@ -10,8 +10,8 @@ const App = () => {
   const { reset: resetField, ...roomField } = useField('text')
 
   const joinRoom = () => {
-    dispatch(setRoom(roomField))
-    join(roomField)
+    dispatch(setRoom(roomField.value))
+    join(roomField.value)
     resetField()
   }
 
